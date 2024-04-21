@@ -8,5 +8,6 @@
 
     <div class="py-12">
         <a href="/generate">Generate NFT</a>
+        <a href="/image">NFT list</a>
     </div>
 </x-app-layout>

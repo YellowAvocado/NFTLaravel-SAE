@@ -30,5 +30,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'showForm']);
 Route::post('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'submitForm']);
+Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'index'])->name('generate.index');
 
 require __DIR__.'/auth.php';

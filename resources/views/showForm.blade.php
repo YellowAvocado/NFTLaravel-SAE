@@ -26,15 +26,6 @@
 
                         </form>
 
-
-                        @foreach ($nfts as $nft)
-                            <div>
-                                <img src="{{ asset('storage/app/assets/' . $nft->image_path) }}" alt="NFT Image">
-                                <p>Title: {{ $nft->title }}</p>
-                                <!-- Other NFT details -->
-                            </div>
-                        @endforeach
-
                 </div>
             </div>
         </div>

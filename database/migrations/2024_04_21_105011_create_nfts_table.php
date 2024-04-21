@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('n_f_t_s', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->binary('images');
+            $table->string('image_path');
+            $table->integer('image_size');
             $table->timestamps();
         });
     }
