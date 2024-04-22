@@ -19,7 +19,6 @@ class NFTFactory extends Factory
         return [
             'title' => fake()->words(3,true),
             'image_path' => fake()->imageUrl(590, 300, 'design'),
-            'image_size' => fake()->numberBetween(500,500),
         ];
     }
 }
