@@ -17,7 +17,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-[url('/public/sources/AbstractBackground.webp')] backdrop-blur bg-contain bg-no-repeat bg-cover">
+    <body class="bg-[url('/public/sources/AbstractBackground.webp')] backdrop-blur-md bg-contain bg-no-repeat bg-cover">
         <div class="font-cambay min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
             <div>
                 <a href="/">

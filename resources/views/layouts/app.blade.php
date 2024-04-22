@@ -15,7 +15,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="bg-gray-100 font-cambay ">
-        <div class="bg-[url('/public/sources/GridPatternBackground.webp')] backdrop-blur bg-contain bg-no-repeat bg-cover">
+        <div class="bg-[url('/public/sources/GridPatternBackground.webp')] backdrop-blur-md bg-contain bg-no-repeat bg-cover">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
