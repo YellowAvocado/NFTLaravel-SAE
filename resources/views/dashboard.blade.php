@@ -6,7 +6,7 @@
 </x-slot>
 
     {{--container--}}
-    <div class="max-w-container mx-auto bg-fixed bg-[url('/public/sources/AbstractPatternBackground.webp')] bg-contain bg-no-repeat bg-cover">
+    <div class="max-w-container mx-auto bg-fixed bg-[url('/public/sources/GridPatternBackground.webp')] bg-contain bg-no-repeat bg-cover">
         <div class="backdrop-blur-lg hover:backdrop-blur-2xl transition ease-in-out duration-700">
             <div class="container mx-auto backdrop-blur-lg rounded-xl backdrop-blur-0">
 
@@ -38,25 +38,19 @@
 
             {{--abstract image container--}}
             <div class="max-w-container mx-auto bg-fixed bg-[url('/public/sources/img-RHmI6pGco1asofSO42gt.png')] bg-contain bg-no-repeat bg-cover">
-                <div class="backdrop-blur-md hover:backdrop-blur-xl transition ease-in-out duration-700 px-[50px] p-9">
-                    <div class="bg-[url('/public/sources/group_7_2x.webp')] animate-pulse h-[100px] w-[100px] bg-contain bg-no-repeat mx-auto"></div>
+                <div class="backdrop-blur-md p-2 sm:p-9 hover:backdrop-blur-xl transition ease-in-out duration-700 sm:px-[50px]">
+                    <div class="bg-[url('/public/sources/group_7_2x.webp')] mt-4 animate-pulse h-[100px] w-[100px] bg-contain bg-no-repeat mx-auto"></div>
                     {{--nft card--}}
-                    <div class="mx-60% flex flex-row justify-center m-6">
-                        <div class="bg-[url('/public/sources/img-LA00zKwdW8wwma2p80Jn.png')] w-[400px] h-[300px] bg-cover bg-center bg-no-repeat rounded-xl m-6"></div>
+                    <div class="mx-60% block lg:flex flex-row justify-center m-6">
+                        <a href="/generate"><div class="mx-auto m-6 w-[90%] sm:w-[400px] h-[300px] lg:mx-4 bg-[url('/public/sources/img-LA00zKwdW8wwma2p80Jn.png')] bg-cover bg-center bg-no-repeat rounded-xl"></div></a>
                         {{--text--}}
-                            <div class="relative w-[400px] h-[300px] bg-white m-6 p-6 rounded-xl">
-                                <h1 class="text-[36px]">Create NFT</h1>
-                                <p>with kargo NFT create trendy NFT's in few seconds. Express your whishes in prompt and automaticaly transfet token to the wallet</p>
-                                <div class="absolute bg-[url('/public/sources/digital-wallet.png')] w-[40px] h-[40px] bg-cover bg-center bg-no-repeat bottom-8 right-12"></div>
+                            <div class="relative mx-auto lg:mx-4 w-[90%] sm:w-[400px] sm:h-[300px] bg-white m-6 p-6 rounded-xl">
+                                <a href="generate"><h1 class="text-[36px]">Create NFT</h1></a>
+                                <a href="/generate"><p class="pb-14">with kargo NFT create trendy NFT's in few seconds. Express your whishes in prompt and automaticaly transfet token to the wallet</p></a>
+                                <a href="/generate"><div class="absolute bg-[url('/public/sources/digital-wallet.png')] w-[40px] h-[40px] bg-cover bg-center bg-no-repeat bottom-8 right-6 sm:right-12"></div></a>
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-                {{--generate NFT link--}}
-                <div class="mt-48 pb-8 text-center">
-                    <a class="border-4 border-t-0 border-r-0 border-yellowy rounded-2xl bg-transparent font-cambay text-xl font-medium bg-black/20 focus:bg-black/50 hover:border-yellow-200 hover:font-medium text-yellowy mx-12 px-[30px] py-[15px] mb-[20px] transition ease-in-out duration-300 mr-5 after:content-['_↗']" href="/generate">generate</a>
                 </div>
             </div>
 </x-app-layout>

@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-[#273749] font-cambay">
+    <body class="bg-[#273749]">
 {{--
                 @include('layouts.navigation')
 --}}
@@ -32,6 +32,12 @@
                 <main>
                     {{ $slot }}
                 </main>
+{{--<footer class="">
+    --}}{{--generate NFT link--}}{{--
+    <div class="mt-48 pb-8 text-center font-cambay">
+        <a class="border-4 rounded-2xl bg-transparent text-lg bg-black/20 focus:bg-black/50 hover:text-coal text-yellowy mx-auto px-[30px] py-[15px] mb-[20px] transition ease-in-out duration-300 mr-5 after:content-['_↗']" href="/generate">generate</a>
+    </div>
+</footer>--}}
 
     <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     </body>

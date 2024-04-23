@@ -17,6 +17,7 @@ module.exports = {
         extend: {
             colors: {
                 'yellowy': '#F3BD31',
+                'coal': '#16202E',
             },
             fontFamily: {
 /*
