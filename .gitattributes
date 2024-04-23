@@ -8,3 +8,4 @@
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 *.webp filter=lfs diff=lfs merge=lfs -text
+public/sources/GridPatternBackground.webp filter=lfs diff=lfs merge=lfs -text

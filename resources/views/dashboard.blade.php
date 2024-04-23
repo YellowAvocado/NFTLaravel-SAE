@@ -6,7 +6,7 @@
 </x-slot>
 
     {{--container--}}
-    <div class="max-w-container mx-auto bg-fixed bg-[url('/public/sources/GridPatternBackground.webp')] bg-contain bg-no-repeat bg-cover">
+    <div class="max-w-container mx-auto bg-fixed bg-[url('/public/sources/AbstractPatternBackground.webp')] bg-contain bg-no-repeat bg-cover">
         <div class="backdrop-blur-lg hover:backdrop-blur-2xl transition ease-in-out duration-700">
             <div class="container mx-auto backdrop-blur-lg rounded-xl backdrop-blur-0">
 
