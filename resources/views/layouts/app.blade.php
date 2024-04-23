@@ -14,23 +14,25 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-gray-100 font-cambay ">
-        <div class="bg-[url('/public/sources/GridPatternBackground.webp')] backdrop-blur-md bg-contain bg-no-repeat bg-cover">
-            @include('layouts.navigation')
+    <body class="bg-[#273749] font-cambay">
+{{--
+                @include('layouts.navigation')
+--}}
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+                <!-- Page Heading -->
+                {{--@if (isset($header))
+                    <header class="dark:bg-gray-800 shadow">
+                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif--}}
 
-            <!-- Page Content -->
-            <main class="">
-                {{ $slot }}
-            </main>
-        </div>
+                <!-- Page Content -->
+                <main>
+                    {{ $slot }}
+                </main>
+
+    <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     </body>
 </html>

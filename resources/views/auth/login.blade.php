@@ -37,14 +37,17 @@
         </div>
 
         <div class="flex flex-col-reverse items-center mt-4">
+            <a class="mt-8 text-sm dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none transition ease-in-out duration-300" href="{{ route('register') }}">
+                {{ __('register') }}
+            </a>
             @if (Route::has('password.request'))
                 <a class="mt-8 text-sm dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none transition ease-in-out duration-300" href="{{ route('login') }}">
-                    {{ __('Forgot your password?') }}
+                    {{ __('forgot password?') }}
                 </a>
             @endif
 
             <x-primary-button class="text-[17px] bg-yellowy rounded-lg mt-8 h-[35px] border-4 border-t-0 border-r-0 border-yellowy transition ease-in-out duration-300">
-                {{ __('Log in') }}
+                {{ __('log in') }}
             </x-primary-button>
         </div>
     </form>
