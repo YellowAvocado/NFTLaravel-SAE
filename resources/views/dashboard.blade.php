@@ -11,7 +11,7 @@
             <div class="container mx-auto backdrop-blur-lg rounded-xl backdrop-blur-0">
 
                 <div class="flex flex-row justify-between h-16">
-                    @include('layouts.navigation')
+                  {{--  @include('layouts.navigation')--}}
 
                     <!-- Page Heading -->
                     {{--@if (isset($header))

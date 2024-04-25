@@ -105,8 +105,6 @@ class ImageGeneratorController extends Controller
         $mintService->mint($request->address, env("APP_URL") . "/storage/assets/" . $imageInfo["name"] . ".json");
     }
 
-
-
     protected function saveImageToDisk($imageData, $title)
     {
         $contents = file_get_contents($imageData);
