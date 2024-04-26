@@ -69,7 +69,11 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('profile') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('admin.index')">
+                            {{ __('admin') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -79,7 +83,7 @@
                             <x-dropdown-link :href="route('logout')"
                                              onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('log out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -113,6 +117,10 @@
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
 
+                    <x-responsive-nav-link :href="route('admin.index')">
+                        {{ __('admin') }}
+                    </x-responsive-nav-link>
+
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -120,7 +128,7 @@
                         <x-responsive-nav-link :href="route('logout')"
                                                onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                            {{ __('Log Out') }}
+                            {{ __('log out') }}
                         </x-responsive-nav-link>
                     </form>
                 </div>

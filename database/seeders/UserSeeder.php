@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Admin',
             'email' => 'admin@nft.com',
+            'role_id' => 1,
             'password' => Hash::make('123123123'),
         ]);
     }

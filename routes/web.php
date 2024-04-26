@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,11 +32,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resource('/admin',AdminController::class);
+});
+
+
 Route::get('/auth/google', [\App\Http\Controllers\GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('/auth/google/call-back', [\App\Http\Controllers\GoogleAuthController::class, 'callbackGoogle'])->name('google-callback');
 
 Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'showForm']);
 Route::post('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'submitForm']);
 Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'index'])->name('generate.index');
+
 
 require __DIR__.'/auth.php';
