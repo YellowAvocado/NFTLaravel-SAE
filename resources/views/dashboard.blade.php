@@ -1,26 +1,21 @@
 <x-app-layout>
-<x-slot name="header">
+{{--<x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Dashboard') }}
         </h2>
-</x-slot>
+</x-slot>--}}
 
     {{--container--}}
     <div class="max-w-container mx-auto bg-fixed bg-[url('/public/sources/GridPatternBackground.webp')] bg-contain bg-no-repeat bg-cover">
         <div class="backdrop-blur-lg hover:backdrop-blur-2xl transition ease-in-out duration-700">
             <div class="container mx-auto backdrop-blur-lg rounded-xl backdrop-blur-0">
 
-                <div class="flex flex-row justify-between h-16">
-                  {{--  @include('layouts.navigation')--}}
-
-                    <!-- Page Heading -->
-                    {{--@if (isset($header))
-                        <header class="dark:bg-gray-800 shadow">
-                            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                                {{ $header }}
-                            </div>
-                        </header>
-                    @endif--}}
+                <div class="ml-12 flex flex-row justify-between h-16">
+                    <div class="shrink-0 items-center mt-8 h-[50px] w-[50px]">
+                        <a class="" href="{{ route('dashboard') }}">
+                            <div class="bg-[url('/public/sources/kargonft_2x.webp')] h-[61px] w-[136px] bg-contain bg-no-repeat"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
             {{--central text--}}

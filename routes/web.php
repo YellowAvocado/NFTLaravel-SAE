@@ -31,6 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/auth/google', [\App\Http\Controllers\GoogleAuthController::class, 'redirect'])->name('google-auth');
+Route::get('/auth/google/call-back', [\App\Http\Controllers\GoogleAuthController::class, 'callbackGoogle'])->name('google-callback');
+
 Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'showForm']);
 Route::post('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'submitForm']);
 Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'index'])->name('generate.index');

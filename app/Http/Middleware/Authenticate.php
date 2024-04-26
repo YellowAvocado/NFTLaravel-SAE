@@ -2,7 +2,12 @@
 
 namespace App\Http\Middleware;
 
+use App\Events\UserLoggedInEvent;
+use App\Notifications\UserLoggedInNotification;
+use http\Client\Request;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 
 class Authenticate extends Middleware
 {
@@ -18,4 +23,6 @@ class Authenticate extends Middleware
             return route('login');
         }
     }
+
+
 }

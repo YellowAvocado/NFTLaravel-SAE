@@ -13,7 +13,7 @@
 
                     <h2>Create project </h2>
 
-                        <form action="/generate" method="post">
+                        <form class="" action="/generate" method="post">
                             @csrf
 
                             <label>Insert prompt</label>

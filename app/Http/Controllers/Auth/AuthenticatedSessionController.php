@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\UserLoggedInEvent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
@@ -45,4 +46,15 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/');
     }
+
+    public function authenticated(Request $request, $user)
+    {
+        event(new UserLoggedInEvent($user));
+
+        // Your existing logic for authenticated users (if any) goes here
+
+        return redirect()->intended($this->redirectPath());
+    }
+
+
 }

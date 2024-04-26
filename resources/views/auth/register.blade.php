@@ -10,7 +10,7 @@
 
         <!-- Email Address -->
         <div class="mt-4 text-right text-yellowy">
-            <x-text-input id="email" placeholder="email" class="block placeholder:text-yellowy  mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20  focus:ring-0 focus:border-yellowy transition ease-in-out duration-300" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" placeholder="email" class="block placeholder:text-yellowy mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20  focus:ring-0 focus:border-yellowy transition ease-in-out duration-300" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -23,6 +23,7 @@
             <x-text-input id="password" class="block mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
                             type="password"
                             name="password"
+                            placeholder="password"
                             required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -46,6 +47,7 @@
             <x-primary-button class="text-[17px] bg-yellowy rounded-lg mt-8 h-[35px] hover:bg-yellow-300 transition ease-in-out duration-300">
                 {{ __('register') }}
             </x-primary-button>
+
         </div>
     </form>
 </x-guest-layout>

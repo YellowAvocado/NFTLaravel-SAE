@@ -18,8 +18,9 @@ class MintNFTService
     public function mint($address, $tokenURI)
     {
         $response = $this->client->post('mint', [
-           "address" => $address,
-            "tokenURI" => $tokenURI
+           'address' => $address,
+            'tokenURI' => $tokenURI
         ]);
+
     }
 }

@@ -1,50 +1,48 @@
 <x-app-layout>
-    {{--<x-slot name="header">
-        <h2 class="font-semibold text-xl text-amber-600 dark:text-gray-200 leading-tight">
-            <p class="text-amber-600">Generated NFTS</p>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Dashboard') }}
         </h2>
-    </x-slot>--}}
+    </x-slot>
+
+    <div class="mx-auto shrink-0 items-center h-[50px]">
+        <a class="mx-auto" href="{{ route('dashboard') }}">
+            <div class="mx-auto mt-[100px] bg-[url('/public/sources/kargo_nft_3x.webp')] h-[150px] sm:w-[300px] w-[150px] bg-contain bg-no-repeat"></div>
+        </a>
+    </div>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid">
-                <div class="grid gap-10 justify-center w-90">
-                    <div class="bg-[url('storage/assets/img-KdTbSv6rwhAA3dDGMqGZ.png')] h-[50px]  border-2 border-red-700 bg-contain"></div>
+            <div class="">
+                <div class="max-w-container rounded-xl mt-6 px-6 py-4 overflow-hidden sm:rounded-lg justify-center w-90">
 
-
-                    <form action="/generate" method="post" enctype="multipart/form-data">
+                    <form class="mx-auto mt-12 sm:mt-48 flex flex-col sm:w-[60%]" action="/generate" method="post" enctype="multipart/form-data">
                         @csrf
-
-                        <label class="">Title of NFT</label>
-                        <input type="text" name="title" placeholder="Enter title">
-
-                        <label>Insert prompt</label>
-                        <input type="text" name="prompt">
-
-                        <label>Insert wallet address</label>
-                        <input type="text" name="address">
-
-                        <button>Send</button>
-
+                        <input class="mt-4 text-[#FFF5E7] block w-full placeholder:text-yellowy border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/50 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300" type="text" name="title" placeholder="Enter title">
+                        <input class="mt-4 text-[#FFF5E7] block w-full placeholder:text-yellowy border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/50 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300" placeholder="insert prompt" type="text" name="prompt">
+                        <input class="mt-4 text-[#FFF5E7] block w-full placeholder:text-yellowy border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/50 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300" placeholder="insert wallet" type="text" name="address">
+                        <button class="relative text-[17px] text-[#FFF5E7] bg-yellowy text-[#4b5563] sm:w-[90%] rounded-lg mt-8 h-[45px] hover:bg-yellow-300 focus:bg-yellow-500 transition ease-in-out duration-300">generate
+                            <div class="hidden sm:block absolute bg-[url('/public/sources/digital-wallet-brown.png')] w-[40px] h-[40px] bg-cover bg-center bg-no-repeat bottom-[5px] right-[-50px]"></div>
+                        </button>
                     </form>
                 </div>
+                <div class="mt-20 sm:mt-48 block sm:grid grid-cols-2 gap-4">
                 @foreach($nfts as $nft)
                     {{--@foreach($types as $type)--}}
-                    <div class="bg-white bg-clip-border text-gray-700" >
-                        <div class="m-6 overflow-hidden bg-transparent bg-clip-border text-gray-700 shadow-none">
-                            <img src="{{ asset('storage/assets/' . $nft->image_path) }}" alt="project image">
+                    <div class="rounded-lg m-4 bg-white bg-clip-border text-gray-700">
+                        <div class="rounded-lg m-4 overflow-hidden bg-transparent bg-clip-border text-gray-700 shadow-none">
+                            <img class="rounded-2xl mt-6 sm:mt-0" src="{{ asset('storage/assets/' . $nft->image_path) }}" alt="project image">
                         </div>
-                        <div class="p-6">
+                        <div class="p-2 sm:p-4 ml-2 sm:ml-0">
                             <h4 class="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-700 antialiased">
-                                <span class="text-blue-gray-500">{{ $nft->title }}</span>
+                                <span class="text-gray-700 text-[16px] sm:text-[20px]">{{ $nft->title }}</span>
                             </h4>
                         </div>
-                        {{--<div class="flex items-center justify-between p-6">
-                            <a href="{{ route('nfts.show', $nft->id ) }}">Show this project</a>
-                        </div>--}}
+
                     </div>
-                    {{--@endforeach--}}
+
                 @endforeach
+                </div>
             </div>
         </div>
     </div>

@@ -88,10 +88,10 @@ class ImageGeneratorController extends Controller
             return;
         }
 
-        $title = $request->title; // Retrieve the title from the request
+        $title = $request->title;
         Log::info('Received title: ' . $request->title);
 
-        $imageInfo = $this->saveImageToDisk($result['data'][0]['url'], $title); // Pass the title
+        $imageInfo = $this->saveImageToDisk($result['data'][0]['url'], $title);
 
         $nftMetadata = [
             "name" => "myNFT",
@@ -102,7 +102,7 @@ class ImageGeneratorController extends Controller
         $NFTname = $imageInfo["name"] . ".json";
         Storage::disk('public')->put($NFTname, json_encode($nftMetadata));
         $mintService = new MintNFTService();
-        $mintService->mint($request->address, env("APP_URL") . "/storage/assets/" . $imageInfo["name"] . ".json");
+        $mintService->mint($request->address, env("APP_URL") . "/storage/" . $imageInfo["name"] . ".json");
     }
 
     protected function saveImageToDisk($imageData, $title)
