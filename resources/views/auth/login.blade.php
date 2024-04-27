@@ -50,9 +50,6 @@
                 {{ __('log in') }}
             </x-primary-button>
 
-            <button href="{{ route('google-auth') }}" class="text-[17px] bg-yellowy rounded-lg mt-8 h-[35px] hover:bg-yellow-300 transition ease-in-out duration-300">
-                {{ route('google-auth') }}
-            </button>
         </div>
     </form>
 </x-guest-layout>
