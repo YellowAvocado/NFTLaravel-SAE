@@ -20,7 +20,7 @@
             <x-input-label for="password" :value="__('password')" />
 --}}
 
-            <x-text-input id="password" class="block mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
+            <x-text-input id="password" class="block mt-1 placeholder:text-yellowy w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
                             type="password"
                             name="password"
                             placeholder="password"
@@ -32,8 +32,9 @@
         <!-- Confirm Password -->
         <div class="mt-4 text-right text-yellowy">
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
+            <x-text-input id="password_confirmation" class="block placeholder:text-yellowy mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
                             type="password"
+                            placeholder="confirm password"
                             name="password_confirmation" required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />

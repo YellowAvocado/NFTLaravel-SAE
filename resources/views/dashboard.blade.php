@@ -10,6 +10,7 @@
         <div class="backdrop-blur-lg hover:backdrop-blur-2xl transition ease-in-out duration-700">
             <div class="container mx-auto backdrop-blur-lg rounded-xl backdrop-blur-0">
 
+                {{--LOGO--}}
                 <div class="ml-12 flex flex-row justify-between h-16">
                     <div class="shrink-0 items-center mt-8 h-[50px] w-[50px]">
                         <a class="" href="{{ route('dashboard') }}">

@@ -10,6 +10,9 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    protected $guarded = [];
+
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -45,6 +48,11 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    public function nfts()
+    {
+        return $this->hasMany(NFT::class);
     }
 
     public function isAdmin()

@@ -19,12 +19,11 @@
     </head>
     <body class="bg-[url('/public/sources/AbstractBackground.webp')] backdrop-blur-md bg-contain bg-no-repeat bg-cover">
         <div class="font-cambay min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+            {{--logo--}}
             <div>
-                <a href="/">
-{{--
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
---}}
-                </a>
+                <div class="shrink-0 items-center mt-8 h-[50px] ">
+                    <div class="bg-[url('/public/sources/kargonft_2x.webp')] h-[61px] w-[136px] bg-contain bg-no-repeat"></div>
+                </div>
             </div>
 
             <div class="w-full backdrop-blur rounded-xl sm:max-w-md mt-6 px-6 py-4 overflow-hidden sm:rounded-lg">

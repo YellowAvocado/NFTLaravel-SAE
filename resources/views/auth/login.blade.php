@@ -20,7 +20,7 @@
             <x-input-label for="password" :value="__('Password')" />
 --}}
 
-            <x-text-input id="password" placehorder="password" class="block mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
+            <x-text-input id="password" placeholder="password" class="block placeholder:text-yellowy mt-1 w-full border-4 border-t-0 border-r-0 border-yellowy rounded-xl bg-transparent focus:bg-black/20 focus:ring-0 focus:border-yellowy transition ease-in-out duration-300"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />

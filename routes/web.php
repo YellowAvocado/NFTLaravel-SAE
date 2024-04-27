@@ -42,7 +42,7 @@ Route::get('/auth/google/call-back', [\App\Http\Controllers\GoogleAuthController
 
 Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'showForm']);
 Route::post('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'submitForm']);
-Route::get('/generate', [\App\Http\Controllers\ImageGeneratorController::class, 'index'])->name('generate.index');
+Route::delete('/generate/{id}', [\App\Http\Controllers\ImageGeneratorController::class, 'destroy'])->name('generate.destroy');
 
 
 require __DIR__.'/auth.php';
