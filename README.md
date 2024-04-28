@@ -1,66 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+##  Starting project locally
 
-## About Laravel
+Application can be startedlocallycloning the repositories and by following next
+steps. Make sure to get the latest versions of all the applications and programming
+languages.
+Applications that have to be downloaded for stating the project:
+Ganache, PHPStorm (or any other code editor), **[Laragon](https://laragon.org/)**, terminal
+## 1. Clone Repositories
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Here is the link to minting repo: https://github.com/YellowAvocado/MyNFTContract
+Here is the link to minting repo: https://github.com/YellowAvocado/NFTLaravel-SAE
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Do the same procedure for both repositories, one at the time, in the terminal:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    git clone git@github.com:YellowAvocado/NFTLaravel-SAE.git
+    git composer install
+    cp .env.example .env
+    php artisan key:generate
+    npm install
+    npm run dev
 
-## Learning Laravel
+##  2. Laragon
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+After cloned repos run laravel and open the application using writing **myNFT.test** in
+the browser. In Laragon start the Apache or Nginx. Doing these steps, the application
+will be visible in the browser on the **/login page**.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 3.Ganache
+Quickstart Ganache and insert credentials in the .env file.
+Here is an example of what an .env file should look like in theNFTLaravel-SAE project.
+(it is safe to provide these credentials since al of them are run localy and wil change
+when Ganache activates every time).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    JSON_RPC_URL=http://127.0.0.1:3000
+    PRIVATE_KEY=0x0e53e734d2761c852b43c26fa77c98410ad96d07dfa7e0dd21b3456ef59
+    81c63
+    CONTRACT_ADDRESS=0x9eB0C08d0AF66476149D96d2D7D059C3c4cded75
+    TOKEN_URI=http://mynft.test/public/storage
 
-## Laravel Sponsors
+Following interface contains all the informations that are needed for adding
+credential in the .enc file.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 4. Minting the data and inserting the API key
+   Run the minting services in the in the new terminal:
 
-### Premium Partners
+   **cd [application_path]**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   **node node_scripts/mintNFT.js**
 
-## Contributing
+   (keep the minting listening the whole time of the testing)
+   Get the **DALL E API** key. And put it in the **.env** 
+   NFTLaravel-SAE file, also make sure that **MINT_URL** is also provided. 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    OPENAI_API_KEY=""
+    MINT_URL="http://localhost:3000"
+   
+## 5. RegisterasAdmin
+   App should be ready for playing. Register as a user or Admin.
 
-## Code of Conduct
+   (admin has the power of accessing the admin panel, but still guest and admin can
+   generate NFT)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+__Admincredentials:__
 
-## Security Vulnerabilities
+    Name: Admin
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    Email: admin@nft.com
 
-## License
+    Password: 123123123
+## 6. GenerateNFT
+   The main part of the application is to generate an NFT, by inserting the credential:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   **Title:**  [title of the image]
+
+   **Prompt:** [describe the look of NFT]
+
+   **Address:** Wallet address generated in the Ganache
